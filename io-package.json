@@ -1,0 +1,74 @@
+{
+    "common": {
+        "name": "webuntis",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung"
+            }
+        },
+        "title": "webuntis",
+        "titleLang": {
+            "en": "webuntis",
+            "de": "Webuntis"
+        },
+        "desc": {
+            "en": "Get the timetable of your school via webuntis",
+            "de": "Holen Sie sich den Stundenplan Ihrer Schule über Webuntis"
+        },
+        "authors": [
+            "NagelMichael <nagelmichael@chello.at>"
+        ],
+        "keywords": [
+            "template",
+            "webuntis",
+            "timetable"
+        ],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "main.js",
+        "icon": "webuntis.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/MichaelNagel/iobroker.webuntis/master/admin/webuntis.png",
+        "readme": "https://github.com/MichaelNagel/iobroker.webuntis/blob/master/README.md",
+        "loglevel": "info",
+        "mode": "schedule",
+        "type": "misc-data",
+        "compact": true,
+        "materialize": true,
+        "dependencies": [
+            {
+                "js-controller": ">=1.4.2"
+            }
+        ]
+    },
+    "native": {
+        "option1": true,
+        "option2": "42"
+    },
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "Device or service connected",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        }
+    ]
+}
